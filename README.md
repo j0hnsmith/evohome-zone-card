@@ -2,10 +2,6 @@
 
 Custom Lovelace card for Honeywell Evohome climate zones, with temporary/permanent override controls and optional compact mode.
 
-## Version
-
-`0.0.1`
-
 ## Features
 
 - Live zone temperature and target display
@@ -14,6 +10,28 @@ Custom Lovelace card for Honeywell Evohome climate zones, with temporary/permane
 - Optional HVAC on/off toggle
 - Optional compact row layout
 - Optional temperature color pills
+
+## Screenshots
+
+### Schedule
+
+<img src="docs/schedule.png" alt="Schedule state" width="450">
+
+### Compact
+
+<img src="docs/compact.png" alt="Compact state" width="450">
+
+### Override Options
+
+<img src="docs/override-options.png" alt="Override options" width="450">
+
+### Temporary Override
+
+<img src="docs/override-temporary.png" alt="Temporary override" width="450">
+
+### Permanent Override
+
+<img src="docs/override-permanent.png" alt="Permanent override" width="450">
 
 ## Installation
 
@@ -67,10 +85,6 @@ compact: false
 | `show_accent_bar` | No | `boolean` | `true` | Shows top accent bar color based on current temperature |
 | `temp_pills` | No | `boolean` | `false` | Uses tinted pill backgrounds for current/target temperatures |
 | `compact` | No | `boolean` | `false` | Starts in compact status-only view; expands on click |
-
-## Screenshots
-
-State screenshots are documented in [docs/README.md](docs/README.md).
 
 ## License
 
