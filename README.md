@@ -2,6 +2,9 @@
 
 Custom Lovelace card for Honeywell Evohome climate zones, with temporary/permanent override controls and optional compact mode.
 
+> [!NOTE]
+> This repo was vibecoded.
+
 ## Features
 
 - Live zone temperature and target display
@@ -37,6 +40,10 @@ Custom Lovelace card for Honeywell Evohome climate zones, with temporary/permane
 
 ### HACS (Custom Repository)
 
+[![Open your Home Assistant instance and open a repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=j0hnsmith&repository=evohome-zone-card&category=plugin)
+
+or
+
 1. In Home Assistant, open HACS.
 2. Go to `⋮` -> `Custom repositories`.
 3. Add this repository URL and select category `Dashboard`.
@@ -45,16 +52,27 @@ Custom Lovelace card for Honeywell Evohome climate zones, with temporary/permane
 
 ### Manual
 
-1. Copy `evohome-zone-card.js` to your Home Assistant `www` directory, for example:
+1. Download `evohome-zone-card.js` from this repository.
+2. Copy it to your Home Assistant `www` directory:
    - `/config/www/evohome-zone-card.js`
-2. Add it as a Lovelace resource:
+3. Add it as a Lovelace resource.
+
+Resource YAML:
 
 ```yaml
 url: /local/evohome-zone-card.js
 type: module
 ```
 
-3. Add the card to a dashboard.
+Resource UI path:
+1. `Settings` -> `Dashboards`
+2. `⋮` -> `Resources`
+3. `Add resource`
+4. URL: `/local/evohome-zone-card.js`
+5. Type: `JavaScript Module`
+
+4. Refresh browser cache (or hard reload).
+5. Add the card to a dashboard.
 
 ## Basic Card YAML
 
