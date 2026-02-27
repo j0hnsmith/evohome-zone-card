@@ -66,8 +66,9 @@ class EvohomeZoneCard extends HTMLElement {
     var newState = hass.states[this._config.entity];
 
     if (oldState !== newState) {
-      this._localTemp = null;
-      this._dirty = false;
+      if (!this._dirty) {
+        this._localTemp = null;
+      }
 
       if (this._loading) {
         var shouldClear = false;
@@ -298,6 +299,8 @@ class EvohomeZoneCard extends HTMLElement {
 
     var temp = this._localTemp !== null ? this._localTemp : this._getEffectiveTarget(status);
     var totalMins = Math.min(1439, Math.max(1, this._durationMins));
+    var draftTemp = this._localTemp;
+    var draftDirty = this._dirty;
 
     this._localTemp = null;
     this._dirty = false;
@@ -314,6 +317,8 @@ class EvohomeZoneCard extends HTMLElement {
       })
       .catch(function (err) {
         console.error("Evohome override failed:", err);
+        this._localTemp = draftTemp;
+        this._dirty = draftDirty;
         this._stopLoading();
       }.bind(this));
   }
@@ -324,6 +329,8 @@ class EvohomeZoneCard extends HTMLElement {
     var status = this._getStatus(entity);
 
     var temp = this._localTemp !== null ? this._localTemp : this._getEffectiveTarget(status);
+    var draftTemp = this._localTemp;
+    var draftDirty = this._dirty;
 
     this._localTemp = null;
     this._dirty = false;
@@ -336,6 +343,8 @@ class EvohomeZoneCard extends HTMLElement {
       })
       .catch(function (err) {
         console.error("Evohome permanent override failed:", err);
+        this._localTemp = draftTemp;
+        this._dirty = draftDirty;
         this._stopLoading();
       }.bind(this));
   }
