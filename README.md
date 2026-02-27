@@ -11,6 +11,8 @@ Custom Lovelace card for Honeywell Evohome climate zones, with temporary/permane
 - Optional compact row layout
 - Optional temperature color pills
 
+[![Open your Home Assistant instance and open a repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=j0hnsmith&repository=evohome-zone-card&category=plugin)
+
 ## Screenshots
 
 ### Schedule
