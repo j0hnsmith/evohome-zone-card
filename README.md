@@ -1,4 +1,4 @@
-# Evohome Zone Card
+# Evohome Cards
 
 Custom Lovelace card for Honeywell Evohome climate zones, with temporary/permanent override controls and optional compact mode.
 
@@ -40,27 +40,27 @@ Custom Lovelace card for Honeywell Evohome climate zones, with temporary/permane
 
 ### HACS (Custom Repository)
 
-[![Open your Home Assistant instance and open a repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=j0hnsmith&repository=evohome-zone-card&category=plugin)
+[![Open your Home Assistant instance and open a repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=j0hnsmith&repository=evohome-cards&category=plugin)
 
 or
 
 1. In Home Assistant, open HACS.
 2. Go to `⋮` -> `Custom repositories`.
 3. Add this repository URL and select category `Dashboard`.
-4. Install `Evohome Zone Card` from HACS.
+4. Install `Evohome Cards` from HACS.
 5. Refresh browser cache after install.
 
 ### Manual
 
-1. Download `evohome-zone-card.js` from this repository.
+1. Download `evohome-cards.js` from this repository.
 2. Copy it to your Home Assistant `www` directory:
-   - `/config/www/evohome-zone-card.js`
+   - `/config/www/evohome-cards.js`
 3. Add it as a Lovelace resource.
 
 Resource YAML:
 
 ```yaml
-url: /local/evohome-zone-card.js
+url: /local/evohome-cards.js
 type: module
 ```
 
@@ -68,7 +68,7 @@ Resource UI path:
 1. `Settings` -> `Dashboards`
 2. `⋮` -> `Resources`
 3. `Add resource`
-4. URL: `/local/evohome-zone-card.js`
+4. URL: `/local/evohome-cards.js`
 5. Type: `JavaScript Module`
 
 4. Refresh browser cache (or hard reload).
@@ -77,14 +77,14 @@ Resource UI path:
 ## Basic Card YAML
 
 ```yaml
-type: custom:evohome-zone-card
+type: custom:evohome-cards
 entity: climate.living_room
 ```
 
 ## Full Config YAML Example
 
 ```yaml
-type: custom:evohome-zone-card
+type: custom:evohome-cards
 entity: climate.living_room
 name: Living Room
 show_hvac_toggle: true
